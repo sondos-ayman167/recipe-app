@@ -1,0 +1,31 @@
+<div class="container my-4">
+  <header class="text-center mb-4">
+    <h1>Your favourite recipes</h1>
+  </header>
+
+  <div class="row" *ngIf="favourites.length > 0; else noFavourites">
+    <div class="col-12 col-sm-6 col-md-4 mb-4" *ngFor="let recipe of favourites; let i = index">
+      <div class="card h-100">
+        <img [src]="recipe.strMealThumb" class="card-img-top" [alt]="recipe.strMeal">
+        <div class="card-body text-center d-flex flex-column justify-content-between">
+          <h5 class="card-title">{{ recipe.strMeal }}</h5>
+          <p class="card-text">{{ recipe.strInstructions?.slice(0, 100) }}...</p>
+          <div>
+            <button class="btn btn-remove btn-sm me-2" (click)="removeFavourite(i)">
+              Remove from favourites
+            </button>
+            <a [routerLink]="['/details', recipe.idMeal]" class="btn btn-details btn-sm">
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noFavourites>
+    <div class="text-center mt-4">
+      <p>There are no favourite recipes yet!</p>
+    </div>
+  </ng-template>
+</div>

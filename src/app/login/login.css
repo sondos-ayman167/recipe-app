@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fffaf4;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.field {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #ff7a00;
+}
+
+.btn {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #e56d00;
+}
+
+.note {
+  font-size: 13px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.note a {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.note a:hover {
+  text-decoration: underline;
+}
+
+/* رسائل النجاح أو الخطأ */
+.message {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+.message.success {
+  background: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #1a7f37;
+}
+.message.error {
+  background: #ffe6e6;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}

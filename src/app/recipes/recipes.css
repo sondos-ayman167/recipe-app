@@ -1,0 +1,23 @@
+/* .details {
+  display: none;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.MyCard:hover .details {
+  display: block; } */
+
+.MyCard {
+  width: 350px;       
+  border-radius: 20px; 
+  overflow: hidden;   
+  margin: auto;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;   
+}
+
+.MyCard:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); 
+  z-index: 10;
+}
+

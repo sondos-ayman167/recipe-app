@@ -1,0 +1,83 @@
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ff9800; 
+  font-family: 'Caveat', cursive;
+}
+
+.feature-img {
+  max-width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-link {
+  color: #ffb74d;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.top-recipes .card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.top-recipes .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.top-recipes .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.top-recipes .card-body {
+  text-align: center;
+  padding: 1rem;
+}
+
+.top-recipes .card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.top-recipes .btn {
+  width: 110px;
+  padding: 6px 0;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}

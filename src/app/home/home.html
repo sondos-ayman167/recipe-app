@@ -1,0 +1,102 @@
+
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1>
+        Find Your <span class="highlight">Favorite Food Recipe</span> in one click!
+      </h1>
+      <p class="lead">
+        Join our vibrant community to explore, create, and share an endless array of delicious recipes.
+      </p>
+      <button class="btn btn-warning btn-lg" (click)="goToRecipes()">Explore Now</button>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="assets/home1.jpg" alt="hero image" class="img-fluid rounded-circle shadow">
+    </div>
+  </div>
+</section>
+
+
+
+<section class="container text-center py-5">
+  <h2 class="mb-4">Our Passion for <span class="highlight">Food and Community</span></h2>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="assets/p1.jpg" alt="recipes" class="feature-img mb-3 rounded" style="height: 150px; width: 150px; object-fit: cover;">
+      <h5>Wide Range of Recipes</h5>
+      <p>Try out a diverse collection of recipes from around the world.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/p2.jpg" alt="creators" class="feature-img mb-3 rounded" style="height: 150px; width: 150px; object-fit: cover;">
+      <h5>Meet Top Creators</h5>
+      <p>Get inspired by our top culinary creators who share their recipes & tips.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/p3.jpg" alt="community" class="feature-img mb-3 rounded" style="height: 150px; width: 150px; object-fit: cover;">
+      <h5>Join a Fav Community</h5>
+      <p>Be part of a vibrant community of food enthusiasts.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="container py-5 top-recipes">
+  <h2 class="text-center mb-5">Spotlight on Our <span class="highlight">Top Recipes</span></h2>
+  <div class="row justify-content-center g-3">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" *ngFor="let recipe of topRecipes">
+      <div class="card h-100 shadow-sm border-0">
+        <img [src]="recipe.strMealThumb" alt="{{recipe.strMeal}}" class="card-img-top rounded-top">
+        <div class="card-body text-center d-flex flex-column justify-content-center">
+          <h5 class="card-title">{{ recipe.strMeal }}</h5>
+          <button class="btn btn-warning mt-2" (click)="goToDetails(recipe.idMeal)">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="container py-5 text-center">
+  <h2>See What Makes Our <span class="highlight">Community Shine</span></h2>
+  <p class="lead">
+    Discover the passion and creativity of our top community members and see why they’re the heart of our platform.
+  </p>
+  <img src="assets/p4.jpg" alt="chef" class="feature-img mb-3">
+  <br>
+  <button class="btn btn-warning btn-lg" (click)="goToLogin()">Join the Community Now</button>
+</section>
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5">What Our <span class="highlight">Members Are Saying</span></h2>
+  <div class="row justify-content-center g-4">
+    <div class="col-md-4" *ngFor="let testimonial of [
+      { message: 'This platform made cooking so much fun! I’ve tried so many new recipes.', name: 'Sarah A.' },
+      { message: 'I love being part of this community. The recipes are always inspiring.', name: 'Ahmed M.' },
+      { message: 'A wonderful place to learn, share, and connect with food lovers!', name: 'Lina K.' }
+    ]">
+      <div class="card p-4 shadow-lg border-0 h-100" style="border-radius: 20px; background: #f9f9f9;">
+        <p class="mb-4 fst-italic">"{{testimonial.message}}"</p>
+        <h6 class="text-end fw-bold">— {{testimonial.name}}</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Recipe Website. All Rights Reserved.</p>
+    <div>
+      <a href="#" class="footer-link">Privacy Policy</a> | 
+      <a href="#" class="footer-link">Terms of Service</a> | 
+      <a href="#" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>

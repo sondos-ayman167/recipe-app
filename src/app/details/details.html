@@ -1,0 +1,39 @@
+<div class="container my-5" *ngIf="meal">
+  <div class="card detail-card shadow-sm">
+    
+    <img [src]="meal.strMealThumb" class="card-img-top" [alt]="meal.strMeal">
+
+    <div class="card-body">
+   
+      <h2 class="card-title text-center mb-3">{{ meal.strMeal }}</h2>
+
+    
+      <div class="badges d-flex justify-content-center gap-3 mb-4">
+        <span class="badge badge-category">{{ meal.strCategory }}</span>
+        <span class="badge badge-area">{{ meal.strArea }}</span>
+      </div>
+
+      
+      <div class="instructions">
+  <p *ngFor="let step of meal.strInstructions.split('. ')">
+    {{ step }}.
+  </p>
+</div>
+
+
+      <h5>Ingredients:</h5>
+      <ul class="ingredients">
+        <li *ngFor="let ing of getIngredients(meal)">{{ ing }}</li>
+      </ul>
+
+     
+      <div class="text-center mt-4">
+        <a routerLink="/recipes" class="btn btn-back">← Back to Recipes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!meal" class="text-center my-5">
+  <p>Loading meal details...</p>
+</div>
